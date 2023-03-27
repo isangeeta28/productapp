@@ -170,6 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           SizedBox(height: 8),
                                           if (homeCon.productData[index].rating != null)
                                             Container(
+                                              //width: Get.width*0.15,
                                               decoration: BoxDecoration(
                                                 color: Colors.green,
                                                 borderRadius: BorderRadius.circular(12),
@@ -178,15 +179,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [
+                                                  SizedBox(width: Get.width*0.01,),
                                                   Text(
-                                                    homeCon.productData[index].rating.toString(),
+                                                    homeCon.productData[index].rating!.rate.toString(),
                                                     style: TextStyle(color: Colors.white),
                                                   ),
+                                                  SizedBox(width: Get.width*0.01,),
                                                   Icon(
                                                     Icons.star,
                                                     size: 16,
                                                     color: Colors.white,
                                                   ),
+                                                  SizedBox(width: Get.width*0.01,),
                                                 ],
                                               ),
                                             ),
